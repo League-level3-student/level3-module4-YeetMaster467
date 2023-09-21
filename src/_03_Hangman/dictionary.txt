@@ -132,6 +132,7 @@ intuitive
 intellectual
 intelligent
 inventive
+Java
 jovial
 joy
 jubilant
@@ -141,6 +142,7 @@ knowing
 knowledgeable
 laugh
 legendary
+league
 light
 learned
 lively
@@ -182,6 +184,7 @@ prepared
 pretty
 principled
 productive
+program
 progress
 prominent
 protected

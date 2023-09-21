@@ -67,7 +67,7 @@ public class _01_IntroToQueue {
     	int pops = r.nextInt(1, 6);
     	
     	System.out.println("Removing " + pops + " elements from Queue...");
-    	for (int i = 0; i <= pops; i++) {
+    	for (int i = 0; i <= pops - 1; i++) {
     		if (!numsQueue.isEmpty()) {
     			System.out.println("Removing value " + numsQueue.remove());
 			}
@@ -79,6 +79,24 @@ public class _01_IntroToQueue {
 
         // 7. Loop until there are no more elements in either the Stack or Queue
         //    and all the elements are printed
+    	
+    while (!nums.isEmpty() && !numsQueue.isEmpty()) {
+    	for (int i = 0; i <= 5; i++) {
+			if (!nums.isEmpty()) {
+				numsQueue.add(nums.pop());
+			}
+		}
+
+      
+    	pops = r.nextInt(1, 6);
+    	
+    	System.out.println("Removing " + pops + " elements from Queue...");
+    	for (int i = 0; i <= pops - 1; i++) {
+    		if (!numsQueue.isEmpty()) {
+    			System.out.println("Removing value " + numsQueue.remove());
+			}
+    	}
         
     }
+   }
 }
