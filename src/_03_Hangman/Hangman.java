@@ -55,7 +55,7 @@ public class Hangman implements KeyListener {
 		for (int i = 0; i < word.length(); i++) {
 			label.setText(label.getText() + "_ ");
 		}
-		System.out.println(word);
+		// System.out.println(word);
 		panel.add(label);
 		frame.add(panel);
 		frame.setTitle("Lives: " + lives);
@@ -73,7 +73,7 @@ public class Hangman implements KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		System.out.println(lives);
+		// System.out.println(lives);
 		if (!label.getText().contains(e.getKeyChar() + "") && e.getKeyChar() != '_' && e.getKeyChar() != ' ' && word.contains(e.getKeyChar() + "")) {
 				StringBuilder s = new StringBuilder(label.getText());
 				for (int i = 0; i < s.length() - 1; i += 2) {
@@ -87,7 +87,14 @@ public class Hangman implements KeyListener {
 			lives--;
 			frame.setTitle("Lives: " + lives);
 			if (lives == 0) {
-				// To do: game over screen
+				int option = JOptionPane.showConfirmDialog(null, "Game Over!\nWould you like to play again?", "Game Over", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+				if (option == JOptionPane.YES_OPTION) {
+					frame.dispose();
+					showWindow();
+					return;
+				} else {
+					System.exit(0);
+				}
 			}
 		}
 		if (!label.getText().contains("_")) {
@@ -115,7 +122,7 @@ public class Hangman implements KeyListener {
 			for (int i = 0; i < word.length(); i++) {
 				label.setText(label.getText() + "_ ");
 			}
-			System.out.println(word);
+			// System.out.println(word);
 			panel.add(label);
 			frame.add(panel);
 			frame.setTitle("Lives: " + lives);
